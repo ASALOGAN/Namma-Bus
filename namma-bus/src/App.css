@@ -1,0 +1,151 @@
+/* ============================================
+   APP CONTAINER / GLOBAL LAYOUT
+============================================ */
+
+.app-layout {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-main);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content area (used only for ETA + AI views) */
+.app-container {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* ============================================
+   MAP FULLSCREEN SECTION
+   (Used only for map view)
+============================================ */
+
+/* FULLSCREEN MAP AREA */
+.map-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--line-color);
+  overflow: hidden;
+  z-index: 1; /* map stays behind sidebar and hamburger */
+}
+
+.map-fullscreen-outer {
+  display: contents; /* no layout interference */
+}
+
+/* ============================================
+   ETA SECTION
+============================================ */
+
+.eta-section {
+  padding: 16px 0;
+}
+
+.eta-section h2 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Card wrapper for table */
+.table-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow-x: auto;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* ============================================
+   ETA TABLE
+============================================ */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* ensures good structure on small screens */
+}
+
+table th {
+  background: var(--color-primary-light);
+  padding: 12px;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+table td {
+  padding: 12px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Mobile optimization */
+@media (max-width: 600px) {
+  .eta-section {
+    padding: 12px 0;
+  }
+
+  table td,
+  table th {
+    padding: 10px;
+  }
+}
+
+/* Empty state */
+.eta-empty {
+  padding: 24px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* ============================================
+   AI SECTION
+============================================ */
+
+.ai-section {
+  padding: 16px 0;
+}
+
+.ai-section h2 {
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.ai-placeholder {
+  color: var(--text-secondary);
+  padding: 18px;
+  background: var(--bg-card);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* ============================================
+   SMOOTH TRANSITIONS
+============================================ */
+
+.app-container,
+.map-fullscreen,
+.table-container,
+.ai-section {
+  transition: all 0.25s ease;
+}

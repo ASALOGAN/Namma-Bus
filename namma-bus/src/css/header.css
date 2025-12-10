@@ -1,0 +1,38 @@
+/* ============================================
+   FLOATING HAMBURGER BUTTON (Top-Left Position)
+============================================ */
+.floating-menu-btn {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+
+  z-index: 99999;
+
+  width: 46px;
+  height: 46px;
+
+  border-radius: 50%;
+  background: #ffffff;
+  border: none;
+  color: #1e293b;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+
+  transition: opacity 0.25s ease, transform 0.12s ease;
+}
+
+/* Hide if sidebar is open */
+.floating-menu-btn.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Press animation */
+.floating-menu-btn:active {
+  transform: scale(0.94);
+}

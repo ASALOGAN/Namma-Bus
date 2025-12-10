@@ -1,0 +1,87 @@
+{
+  "route_name": "MyCEM College Route One",
+  "route_id": "mycem_1",
+
+  "start_point": {
+    "id": "start",
+    "name": "DeveGowda Circle",
+    "lat": 12.3043808,
+    "lng": 76.7041042
+  },
+
+  "stops": [
+    {
+      "id": "stop_1",
+      "name": "Teachers Layout",
+      "lat": 12.313533,
+      "lng": 76.69396549999999
+    },
+    {
+      "id": "stop_2",
+      "name": "Sathgalli Layout",
+      "lat": 12.3254735,
+      "lng": 76.69468719999999
+    },
+    {
+      "id": "stop_3",
+      "name": "Kalyangiri",
+      "lat": 12.3251887,
+      "lng": 76.68891359999999
+    },
+    {
+      "id": "stop_4",
+      "name": "Nimra Masjid",
+      "lat": 12.3322526,
+      "lng": 76.6839775
+    },
+    {
+      "id": "stop_5",
+      "name": "Rajiv Nagar",
+      "lat": 12.3343493,
+      "lng": 76.6768924
+    },
+    {
+      "id": "stop_6",
+      "name": "Naidu Nagar, Water Tank",
+      "lat": 12.341649,
+      "lng": 76.66740279999999
+    },
+    {
+      "id": "stop_7",
+      "name": "N R Mohalla",
+      "lat": 12.3275888,
+      "lng": 76.66421059999999
+    },
+    {
+      "id": "stop_8",
+      "name": "Shree Mahalakshmi Sweets",
+      "lat": 12.3228226,
+      "lng": 76.67406439999999
+    },
+    {
+      "id": "stop_9",
+      "name": "Gayathripuram Bus Stand",
+      "lat": 12.3166584,
+      "lng": 76.6803311
+    },
+    {
+      "id": "stop_10",
+      "name": "St Philomena's Cathedral",
+      "lat": 12.3210417,
+      "lng": 76.65826349999999
+    },
+    {
+      "id": "stop_11",
+      "name": "R Gate",
+      "lat": 12.2958104,
+      "lng": 76.6393805
+    }
+  ],
+
+  "end_point": {
+    "id": "college",
+    "name": "MyCEM College",
+    "lat": 12.2798837,
+    "lng": 76.72119549999999
+  }
+}

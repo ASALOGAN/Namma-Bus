@@ -1,0 +1,353 @@
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+
+  /* remove blur + remove dark overlay */
+  background: transparent;
+  backdrop-filter: none;
+
+  opacity: 1; /* always visible so sidebar can slide */
+  pointer-events: none; /* overlay never blocks map */
+  z-index: 999;
+}
+
+/* Only the sidebar drawer becomes active */
+.sidebar-overlay.open {
+  opacity: 1;
+  pointer-events: none; /* still non-blocking */
+}
+
+
+/* ============================================
+   SIDEBAR DRAWER — Interactive, slides in
+============================================ */
+.sidebar {
+  width: 88%;
+  max-width: 380px;
+  height: 100%;
+
+  background: linear-gradient(to bottom right, #0f172a, #1e293b);
+  color: white;
+
+  padding: 24px;
+  padding-top: 40px;
+
+  position: absolute;
+  left: -100%; /* hidden by default */
+  top: 0;
+  transition: left 0.25s ease;
+
+  pointer-events: auto; /* keep sidebar interactive */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #94a3b8 transparent;
+}
+
+.sidebar-overlay.open .sidebar {
+  left: 0; /* slide in */
+}
+
+/* ============================================
+   CLOSE BUTTON
+============================================ */
+.close-btn {
+  position: absolute;
+  top: 1%;
+  right: 5%;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  color: #ffffffbb;
+
+  border-radius: 50%;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================
+   TITLE + SUBTITLE
+============================================ */
+.sidebar-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+
+.highlight {
+  color: #3b82f6;
+}
+
+.sidebar-subtitle {
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+/* ============================================
+   TITLE ROW + REFRESH BUTTON
+============================================ */
+.sidebar-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+.refresh-btn {
+  background: white;
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.refresh-btn:active {
+  transform: scale(0.9);
+}
+
+/* ============================================
+   START SIMULATION BUTTON
+============================================ */
+.start-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+
+  background: #2563eb;
+  color: white;
+  border: none;
+  font-size: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.start-btn:active {
+  transform: scale(0.98);
+}
+
+.start-btn.disabled {
+  background: #1e3a8a;
+  opacity: 0.7;
+  cursor: default;
+}
+
+/* ============================================
+   BUS STATUS CARD
+============================================ */
+.status-card {
+  background: #ffffff;
+  color: #1e293b;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+.status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.status-header h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.live-badge {
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-body {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.speed-value {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.speed-unit {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.status-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.status-label {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.status-stop {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* ============================================
+   AI ANALYSIS CARD
+============================================ */
+.ai-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 20px;
+}
+
+.ai-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 6px;
+}
+
+.ai-subtext {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.4;
+}
+
+/* ============================================
+   ETA TABLE
+============================================ */
+.upcoming-title {
+  margin-top: 24px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: white;
+  opacity: 0.85;
+}
+
+.upcoming-list {
+  margin-top: 10px;
+}
+
+.stop-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+  border-radius: 10px;
+
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.stop-dot {
+  width: 10px;
+  height: 10px;
+  background: #3b82f6;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.stop-name {
+  flex: 1;
+  margin-left: 10px;
+  font-size: 0.95rem;
+  color: #1e293b;
+}
+
+.stop-eta {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* ============================================
+   SCROLLBAR
+============================================ */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ============================================
+   ETA ROW ENTRY ANIMATION
+============================================ */
+.animated-row {
+  transform: translateY(8px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.row-enter {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/* ============================================
+   ETA VALUE ANIMATION (smooth number change)
+============================================ */
+.eta-animate {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.eta-animate.changed {
+  color: #2563eb;
+  transform: scale(1.1);
+}
+
+/* ============================================
+   PASSED STOP STYLE
+============================================ */
+.stop-passed {
+  opacity: 0.4;
+  background: #e5e7eb;
+  transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+.dot-passed {
+  background: #6b7280 !important;
+}
+
+/* Empty ETA message */
+.eta-empty {
+  color: white;
+  opacity: 0.7;
+  margin-top: 8px;
+}

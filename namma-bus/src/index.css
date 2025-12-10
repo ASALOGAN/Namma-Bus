@@ -1,0 +1,43 @@
+/* ================================
+   SMARTBUS THEME (VIBRANT LIGHT MODE ONLY)
+================================ */
+:root {
+  --color-primary: #2563eb;         /* Vibrant SmartBus Blue */
+  --color-primary-hover: #1d4ed8;
+  --color-primary-light: #e0edff;   /* Softer light blue for sections */
+
+  --bg-main: #f5f7fa;               /* Clean premium background */
+  --bg-card: #ffffff;               /* Cards + tables */
+
+  --border-color: #d9e2ec;
+  --line-color: #cbd5e1;
+
+  --text-primary: #1e293b;          /* Slate/blue modern text */
+  --text-secondary: #475569;
+  --text-muted: #6b7280;
+
+  --header-height: 56px;
+}
+
+/* ================================
+   GLOBAL RESET
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: var(--bg-main);
+  color: var(--text-primary);
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
