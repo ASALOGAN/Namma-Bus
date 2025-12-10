@@ -20,7 +20,7 @@ const BusStatusCard = ({ location }) => {
       {/* HEADER */}
       <div className="status-header">
         <h3>Bus Status</h3>
-        <span className="live-badge">{completed ? "Completed" : "Live"}</span>
+        <span className="live-badge">{completed ? "Completed" : "Simulated GPS Route"}</span>
       </div>
 
       <div className="status-body">
