@@ -93,7 +93,7 @@ Or using yarn:
 yarn install
 ```
 
-3. Configure Environment Variables
+### 3. Configure Environment Variables
 
 Create a `.env` file at the root of the project:
 
@@ -109,7 +109,7 @@ VITE_GOOGLE_MAPS_API_KEY=YOUR_GOOGLE_MAPS_API_KEY_HERE
 
 This key is used by `@react-google-maps/api` inside `MapView.jsx`.
 
-4. Run the App in Development Mode
+### 4. Run the App in Development Mode
 
 Using npm:
 
