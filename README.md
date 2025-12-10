@@ -77,9 +77,9 @@ Before you begin, ensure you have the following installed:
 ```bash
 git https://github.com/ASALOGAN/Namma-Bus.git
 cd Namma-Bus/namma-bus
+```
 
-
-2. Install Dependencies
+### 2. Install Dependencies
 
 Using npm:
 
